@@ -1,26 +1,13 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://app.circleci.com/pipelines/github/DoxopoulosPanos/AWSDevOps_Udacity_4thAssignment?branch=circleci-project-setup.svg?style=svg)](https://app.circleci.com/pipelines/github/DoxopoulosPanos/AWSDevOps_Udacity_4thAssignment?branch=circleci-project-setup)
 
-## Project Overview
+## Project Summary
 
+The aim of this project is to deploy an application that makes predictions for housing prices in Boston. There are 2 ways to deploy the app. 
+1) Using a docker image you are able to deploy the app in a docker container
+2) Using a Kubernetes cluster you are able to deploy the applications in containers inside Kubernetes pods. This is a more scalable solution, able to adjust the resourses according to the load.
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
-
-### Project Tasks
-
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
-
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
+The project is part of the assignment for the Udacity course AWS Cloud devops Engineer.
 ---
 
 ## Setup the Environment
@@ -36,15 +23,20 @@ source .devops/bin/activate
 ```
 * Run `make install` to install the necessary dependencies
 
-### Running `app.py`
+## Instructions on how to run the Python scripts and web app
 
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+- Run the application in a Docker container:  `./run_docker.sh`
+- Run the application in a Kubernetes cluster:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+## A short explanation of the files in the repository.
+
+- output_txt_files : Folder with Two files (docker_out.txt, kubernetes_out.txt) with the output of the application server running in docker and running in a kubernetes cluster respectively.
+- app.py : The code of the application (server)
+- make_predictions.sh : File that can execute a request/call to the server and retrieve a prediction.
+- Dockerfile : The configuration to create a docker image and hence a container (including the application)
+- Makefile : File to install all the prerequisites. 
+- requirements.txt : File that includes all the required libraries and their versions. This can be used from the Makefile.
+- run_docker.sh : File that allows to build a docker image (with the application) and run it in a container
+- run_kubernetes.sh : Run the Docker Hub container in a local kubernetes cluster
+- upload_docker.sh : file that is used to upload/push the created docker image to DockerHub, in order to be used from Kubernetes.
