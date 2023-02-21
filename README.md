@@ -1,4 +1,4 @@
-[![CircleCI](https://app.circleci.com/pipelines/github/DoxopoulosPanos/AWSDevOps_Udacity_4thAssignment?branch=circleci-project-setup.svg?style=svg)](https://app.circleci.com/pipelines/github/DoxopoulosPanos/AWSDevOps_Udacity_4thAssignment?branch=circleci-project-setup)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/DoxopoulosPanos/AWSDevOps_Udacity_4thAssignment/tree/circleci-project-setup.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/DoxopoulosPanos/AWSDevOps_Udacity_4thAssignment/tree/circleci-project-setup)
 
 ## Project Summary
 
