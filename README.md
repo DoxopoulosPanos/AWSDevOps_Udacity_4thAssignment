@@ -8,6 +8,7 @@ The aim of this project is to deploy an application that makes predictions for h
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
 
 The project is part of the assignment for the Udacity course AWS Cloud devops Engineer.
+
 ---
 
 ## Setup the Environment
